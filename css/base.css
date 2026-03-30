@@ -208,15 +208,10 @@ h3 {
 }
 
 .header-meta__row,
-.header-meta__info,
-.header-meta__social {
+.header-meta__info {
   display: flex;
   align-items: center;
   gap: 1rem;
-}
-
-.header-meta__social {
-  display: none;
 }
 
 .header-meta__row {
@@ -227,15 +222,9 @@ h3 {
   justify-content: space-between;
 }
 
-.header-meta__info,
-.header-meta__social {
+.header-meta__info {
   font-size: 0.78rem;
   line-height: 1;
-}
-
-.header-meta__social a {
-  font-weight: 700;
-  letter-spacing: 0.04em;
 }
 
 .brand-mark {
@@ -873,8 +862,7 @@ textarea {
     display: inline-flex;
   }
 
-  .header-meta__info span:last-child,
-  .header-meta__social {
+  .header-meta__info span:last-child {
     display: none;
   }
 
