@@ -1,4 +1,82 @@
-.about-columns article {
+.about-hero > div:first-child {
+  max-width: 40rem;
+}
+
+.about-hero h1 {
+  font-size: clamp(2.35rem, 3.8vw, 4rem);
+  line-height: 1.04;
+  max-width: 12ch;
+}
+
+.about-hero .lead {
+  max-width: 30rem;
+}
+
+.about-hero__side {
+  display: grid;
+  gap: 1.15rem;
+}
+
+.about-hero__note {
+  display: grid;
+  gap: 1rem;
+  padding: 1.2rem 0 0;
+  border-top: 1px solid var(--border);
+}
+
+.about-hero__note > p {
+  max-width: 31rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.about-hero__rule {
+  display: grid;
+  gap: 0.45rem;
+  padding-left: 1rem;
+  border-left: 2px solid rgba(140, 107, 79, 0.38);
+}
+
+.about-hero__rule span {
+  color: var(--accent-warm);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.about-hero__rule p {
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+.about-compact {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.4rem);
+}
+
+.about-compact__intro {
+  display: grid;
+  gap: 0.9rem;
+  max-width: 46rem;
+}
+
+.about-compact__points {
+  display: grid;
+  gap: 1rem;
+}
+
+.about-compact__point {
+  display: grid;
+  gap: 0.7rem;
   padding-top: 1.2rem;
   border-top: 1px solid var(--border);
+}
+
+@media (max-width: 900px) {
+  .about-hero h1,
+  .about-hero .lead,
+  .about-hero__note > p {
+    max-width: none;
+  }
 }

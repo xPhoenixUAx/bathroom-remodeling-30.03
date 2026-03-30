@@ -32,11 +32,19 @@
         <div class="container header-row">
           <a class="brand-mark" href="index.html"><span class="brand-mark__eyebrow">Interior-Led Referral Platform</span><span class="brand-mark__name">Bathing Room</span></a>
           <nav class="desktop-nav" aria-label="Primary">
-            <a href="services.html">Remodeling Paths</a><a href="services.html">Service Guides</a><a href="about.html">About</a><a href="contact.html">Contact</a>
-          </nav>
-          <div class="header-actions">
-            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>Menu</button>
-          </div>
+  <div class="desktop-nav__dropdown">
+    <a class="desktop-nav__toggle" href="services.html">Remodeling Paths</a>
+    <div class="desktop-nav__menu">
+      <a href="showers.html">Showers &amp; Shower Conversions</a>
+      <a href="tubs.html">Tubs &amp; Bathing Comfort</a>
+      <a href="accessibility.html">Accessibility &amp; Safety Upgrades</a>
+      <a href="planning.html">Full Bathroom Planning</a>
+    </div>
+  </div>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+          <div class="header-actions"><a class="button button--primary header-cta" href="contact.html">Send Request</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>Menu</button></div>
         </div>
       </header>
 
@@ -45,8 +53,22 @@
         <div class="overlay-menu__panel">
           <div class="overlay-menu__top"><p class="overlay-menu__label">Navigation</p><button class="overlay-menu__close" type="button" data-menu-close>Close</button></div>
           <nav class="overlay-menu__nav" aria-label="Overlay navigation">
-            <a href="index.html" data-stagger-item>Home</a><a href="services.html" data-stagger-item>Remodeling Paths</a><a href="services.html" data-stagger-item>Service Guides</a><a href="about.html" data-stagger-item>Platform Approach</a><a href="contact.html" data-stagger-item>Contact</a><a href="privacy.html" data-stagger-item>Privacy</a><a href="terms.html" data-stagger-item>Terms</a>
-          </nav>
+  <a href="index.html" data-stagger-item>Home</a>
+  <details class="overlay-nav-group" data-stagger-item>
+    <summary class="overlay-nav-group__toggle">Remodeling Paths</summary>
+    <div class="overlay-nav-group__menu">
+      <a href="services.html">All Remodeling Paths</a>
+      <a href="showers.html">Showers &amp; Shower Conversions</a>
+      <a href="tubs.html">Tubs &amp; Bathing Comfort</a>
+      <a href="accessibility.html">Accessibility &amp; Safety Upgrades</a>
+      <a href="planning.html">Full Bathroom Planning</a>
+    </div>
+  </details>
+  <a href="about.html" data-stagger-item>Platform Approach</a>
+  <a href="contact.html" data-stagger-item>Contact</a>
+  <a href="privacy.html" data-stagger-item>Privacy</a>
+  <a href="terms.html" data-stagger-item>Terms</a>
+</nav>
           <div class="overlay-menu__footer" data-stagger-item><a class="button button--primary" href="contact.html">Explore Local Matches</a><p>Explore bathroom upgrade paths with clarity and local direction.</p></div>
         </div>
       </div>
@@ -63,7 +85,7 @@
           </div>
         </section>
 
-        <section class="section section--bordered">
+        <section class="section section--bordered" id="service-guides">
           <div class="container services-flow">
             <section class="service-group" data-reveal>
               <div class="service-group__intro">
@@ -109,7 +131,7 @@
       </main>
 
       <footer class="site-footer">
-        <div class="container footer-grid"><a class="brand-mark brand-mark--footer" href="index.html"><span class="brand-mark__eyebrow">Bathroom referral platform</span><span class="brand-mark__name">Bathing Room</span></a><div class="footer-links"><a href="services.html">Remodeling Paths</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div>
+        <div class="container footer-grid"><a class="brand-mark brand-mark--footer" href="index.html"><span class="brand-mark__eyebrow">Bathroom referral platform</span><span class="brand-mark__name">Bathing Room</span><span class="brand-mark__description">A bathroom remodeling referral platform for clearer comparisons and local contractor connections.</span></a><div class="footer-links"><a href="services.html">Remodeling Paths</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="cookie.html">Cookie</a><a href="terms.html">Terms</a></div></div>
         <div class="container footer-legal"><p>Disclaimer: This site is a free service to assist homeowners in connecting with local service providers. All contractors/providers are independent and this site does not warrant or guarantee any work performed. It is the responsibility of the homeowner to verify that the hired contractor furnishes the necessary license and insurance required for the work being performed. All persons depicted in a photo or video are actors or models and not contractors listed on this site.</p></div>
       </footer>
     </div>
@@ -119,3 +141,11 @@
     <script src="js/main.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+

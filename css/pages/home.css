@@ -28,7 +28,13 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(12, 12, 12, 0.86) 0%, rgba(12, 12, 12, 0.58) 34%, rgba(12, 12, 12, 0.18) 64%, rgba(12, 12, 12, 0.12) 100%),
+    linear-gradient(
+      90deg,
+      rgba(12, 12, 12, 0.86) 0%,
+      rgba(12, 12, 12, 0.58) 34%,
+      rgba(12, 12, 12, 0.18) 64%,
+      rgba(12, 12, 12, 0.12) 100%
+    ),
     linear-gradient(180deg, rgba(12, 12, 12, 0.3), rgba(12, 12, 12, 0.42)),
     url("../../img/home/hero-bg.jpg") center center / cover no-repeat;
   box-shadow: var(--shadow);
@@ -104,7 +110,12 @@
   position: absolute;
   inset: -16% 0;
   background:
-    linear-gradient(90deg, rgba(15, 15, 15, 0.72) 0%, rgba(15, 15, 15, 0.54) 36%, rgba(15, 15, 15, 0.3) 100%),
+    linear-gradient(
+      90deg,
+      rgba(15, 15, 15, 0.72) 0%,
+      rgba(15, 15, 15, 0.54) 36%,
+      rgba(15, 15, 15, 0.3) 100%
+    ),
     linear-gradient(180deg, rgba(15, 15, 15, 0.14), rgba(15, 15, 15, 0.38)),
     url("../../img/home/cta-banner.jpg") center center / cover no-repeat;
   transform: translate3d(0, 0, 0) scale(1.14);
@@ -209,7 +220,11 @@
   padding: clamp(1.4rem, 3vw, 2rem);
   border-radius: var(--radius-md);
   border: 1px solid rgba(38, 35, 31, 0.07);
-  background: linear-gradient(140deg, rgba(254, 252, 248, 0.88), rgba(232, 224, 213, 0.78));
+  background: linear-gradient(
+    140deg,
+    rgba(254, 252, 248, 0.88),
+    rgba(232, 224, 213, 0.78)
+  );
   box-shadow: var(--shadow);
 }
 
@@ -241,6 +256,15 @@
     grid-template-columns: 1fr;
   }
 
+  .sticky-intro {
+    position: static;
+    top: auto;
+  }
+
+  .direction-stream {
+    margin-top: 0.25rem;
+  }
+
   .planning-step--raised,
   .direction-stream__item--offset {
     transform: none;
@@ -252,28 +276,49 @@
   .hero-stage {
     min-height: auto;
     gap: 0;
+    background: #181614;
   }
 
   .hero-stage__inner {
     display: block;
-    padding-top: 23rem;
+    padding-top: 1rem;
   }
 
   .hero-stage__backdrop {
-    height: 25rem;
+    height: 22rem;
+    box-shadow: none;
   }
 
   .hero-stage__panel {
     width: 100%;
-    margin-top: -4rem;
-    padding: 1.4rem;
-    border-radius: var(--radius-md);
-    background: rgba(20, 20, 20, 0.92);
-    box-shadow: 0 18px 48px rgba(38, 35, 31, 0.18);
+    margin-top: 0;
+    padding: 1.5rem 1.2rem 1.65rem;
+    border-radius: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(24, 22, 20, 0.96),
+      rgba(24, 22, 20, 1)
+    );
+    box-shadow: none;
   }
 
   .hero-stage__panel h1 {
-    font-size: clamp(2.3rem, 10vw, 3.5rem);
+    font-size: clamp(2.15rem, 9.5vw, 3.1rem);
+    line-height: 0.98;
+  }
+
+  .hero-stage__panel .section-kicker {
+    margin-bottom: 1rem;
+  }
+
+  .hero-stage__panel .lead {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  .hero-stage__note {
+    margin-top: 1rem;
+    padding-top: 0.9rem;
   }
 
   .hero-stage .hero-actions {

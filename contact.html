@@ -31,8 +31,20 @@
         </div>
         <div class="container header-row">
           <a class="brand-mark" href="index.html"><span class="brand-mark__eyebrow">Interior-Led Referral Platform</span><span class="brand-mark__name">Bathing Room</span></a>
-          <nav class="desktop-nav" aria-label="Primary"><a href="services.html">Remodeling Paths</a><a href="services.html">Service Guides</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
-          <div class="header-actions"><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>Menu</button></div>
+          <nav class="desktop-nav" aria-label="Primary">
+  <div class="desktop-nav__dropdown">
+    <a class="desktop-nav__toggle" href="services.html">Remodeling Paths</a>
+    <div class="desktop-nav__menu">
+      <a href="showers.html">Showers &amp; Shower Conversions</a>
+      <a href="tubs.html">Tubs &amp; Bathing Comfort</a>
+      <a href="accessibility.html">Accessibility &amp; Safety Upgrades</a>
+      <a href="planning.html">Full Bathroom Planning</a>
+    </div>
+  </div>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+          <div class="header-actions"><a class="button button--primary header-cta" href="contact.html">Send Request</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>Menu</button></div>
         </div>
       </header>
 
@@ -40,7 +52,23 @@
         <div class="overlay-menu__backdrop" data-menu-close></div>
         <div class="overlay-menu__panel">
           <div class="overlay-menu__top"><p class="overlay-menu__label">Navigation</p><button class="overlay-menu__close" type="button" data-menu-close>Close</button></div>
-          <nav class="overlay-menu__nav" aria-label="Overlay navigation"><a href="index.html" data-stagger-item>Home</a><a href="services.html" data-stagger-item>Remodeling Paths</a><a href="services.html" data-stagger-item>Service Guides</a><a href="about.html" data-stagger-item>Platform Approach</a><a href="contact.html" data-stagger-item>Contact</a><a href="privacy.html" data-stagger-item>Privacy</a><a href="terms.html" data-stagger-item>Terms</a></nav>
+          <nav class="overlay-menu__nav" aria-label="Overlay navigation">
+  <a href="index.html" data-stagger-item>Home</a>
+  <details class="overlay-nav-group" data-stagger-item>
+    <summary class="overlay-nav-group__toggle">Remodeling Paths</summary>
+    <div class="overlay-nav-group__menu">
+      <a href="services.html">All Remodeling Paths</a>
+      <a href="showers.html">Showers &amp; Shower Conversions</a>
+      <a href="tubs.html">Tubs &amp; Bathing Comfort</a>
+      <a href="accessibility.html">Accessibility &amp; Safety Upgrades</a>
+      <a href="planning.html">Full Bathroom Planning</a>
+    </div>
+  </details>
+  <a href="about.html" data-stagger-item>Platform Approach</a>
+  <a href="contact.html" data-stagger-item>Contact</a>
+  <a href="privacy.html" data-stagger-item>Privacy</a>
+  <a href="terms.html" data-stagger-item>Terms</a>
+</nav>
           <div class="overlay-menu__footer" data-stagger-item><a class="button button--primary" href="contact.html">Explore Local Matches</a><p>Explore bathroom upgrade paths with clarity and local direction.</p></div>
         </div>
       </div>
@@ -48,31 +76,61 @@
       <main>
         <section class="page-hero section">
           <div class="container contact-hero">
-            <div data-reveal><p class="section-kicker">Contact</p><h1>Share your bathroom priorities and we will help guide the next comparison step.</h1></div>
-            <div data-reveal><p class="lead">Use the form to outline remodeling goals, access considerations, bathing preferences, or finish direction before exploring independent local contractors.</p></div>
+            <div data-reveal class="contact-hero__lead">
+              <p class="section-kicker">Contact</p>
+              <h1>Share the room priorities first. We will help narrow the right next step.</h1>
+            </div>
+            <div data-reveal class="contact-hero__support">
+              <p class="lead">Use the form to outline remodeling goals, access considerations, bathing preferences, or finish direction before exploring independent local contractors.</p>
+              <div class="contact-hero__meta">
+                <a href="tel:524362985">524-362-985</a>
+                <span>Referral guidance across USA remodeling paths</span>
+              </div>
+            </div>
           </div>
         </section>
 
         <section class="section section--bordered contact-layout">
           <div class="container contact-layout__grid">
-            <form class="contact-form" data-reveal>
+            <form class="contact-form" data-reveal data-contact-form>
               <label>Full name<input type="text" name="name" placeholder="Your name" /></label>
               <label>Email address<input type="email" name="email" placeholder="name@email.com" /></label>
               <label>Phone number<input type="tel" name="phone" placeholder="(555) 555-5555" /></label>
               <label>Remodeling direction<select name="direction"><option>Walk-In Shower</option><option>Tub-to-Shower Conversion</option><option>Shower-to-Tub Conversion</option><option>Accessibility Upgrades</option><option>Bathroom Renovation Planning</option><option>Not sure yet</option></select></label>
               <label>Project notes<textarea name="notes" rows="6" placeholder="Share layout goals, comfort needs, bathing preferences, or material considerations."></textarea></label>
-              <button class="button button--primary" type="submit">Submit Inquiry</button>
+              <button class="button button--primary" type="submit">Send Request</button>
             </form>
             <div class="contact-aside" data-reveal>
-              <div class="image-placeholder image-placeholder--portrait"><span>[IMAGE: Warm residential bathroom with oak vanity, veined stone backsplash, and soft afternoon daylight, premium lifestyle interior photography]</span></div>
-              <div><p class="section-kicker">What to include</p><h2>The most helpful starting notes are usually simple.</h2><p class="muted">Mention whether the room is used daily by one person or several, whether a shower or tub is preferred, and if there are access or safety concerns shaping the project.</p></div>
+              <div class="contact-map">
+                <iframe
+                  title="Bathing Room service coverage map"
+                  src="https://www.google.com/maps?q=United%20States&z=3&output=embed"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+              <div class="contact-note"><h2>The most helpful starting notes are usually simple.</h2><p class="muted">Mention whether the room is used daily by one person or several, whether a shower or tub is preferred, and if there are access or safety concerns shaping the project.</p></div>
             </div>
           </div>
         </section>
       </main>
 
+      <div class="contact-modal" data-contact-modal aria-hidden="true">
+        <div class="contact-modal__backdrop" data-contact-modal-close></div>
+        <div class="contact-modal__panel" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+          <button class="contact-modal__close" type="button" aria-label="Close confirmation" data-contact-modal-close>Close</button>
+          <p class="section-kicker">Inquiry sent</p>
+          <h2 id="contact-modal-title">Your details have been received.</h2>
+          <p class="muted">Thank you for sharing your project direction. The next step can now be compared with more clarity before moving into local contractor conversations.</p>
+          <div class="contact-modal__actions">
+            <a class="button button--primary" href="services.html">Review Remodeling Paths</a>
+            <button class="button button--ghost" type="button" data-contact-modal-close>Close</button>
+          </div>
+        </div>
+      </div>
+
       <footer class="site-footer">
-        <div class="container footer-grid"><a class="brand-mark brand-mark--footer" href="index.html"><span class="brand-mark__eyebrow">Bathroom referral platform</span><span class="brand-mark__name">Bathing Room</span></a><div class="footer-links"><a href="services.html">Remodeling Paths</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div>
+        <div class="container footer-grid"><a class="brand-mark brand-mark--footer" href="index.html"><span class="brand-mark__eyebrow">Bathroom referral platform</span><span class="brand-mark__name">Bathing Room</span><span class="brand-mark__description">A bathroom remodeling referral platform for clearer comparisons and local contractor connections.</span></a><div class="footer-links"><a href="services.html">Remodeling Paths</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="cookie.html">Cookie</a><a href="terms.html">Terms</a></div></div>
         <div class="container footer-legal"><p>Disclaimer: This site is a free service to assist homeowners in connecting with local service providers. All contractors/providers are independent and this site does not warrant or guarantee any work performed. It is the responsibility of the homeowner to verify that the hired contractor furnishes the necessary license and insurance required for the work being performed. All persons depicted in a photo or video are actors or models and not contractors listed on this site.</p></div>
       </footer>
     </div>
@@ -82,3 +140,11 @@
     <script src="js/main.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+

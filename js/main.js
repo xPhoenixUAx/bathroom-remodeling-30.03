@@ -3,6 +3,9 @@ const header = document.querySelector("[data-header]");
 const menu = document.querySelector("[data-menu]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const menuCloseButtons = document.querySelectorAll("[data-menu-close]");
+const contactForm = document.querySelector("[data-contact-form]");
+const contactModal = document.querySelector("[data-contact-modal]");
+const contactModalCloseButtons = document.querySelectorAll("[data-contact-modal-close]");
 const revealItems = document.querySelectorAll("[data-reveal]");
 const parallaxSections = document.querySelectorAll("[data-parallax-section]");
 
@@ -28,6 +31,28 @@ if (menuToggle && menu) {
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") setMenuState(false);
+  });
+}
+
+const setContactModalState = (open) => {
+  if (!contactModal) return;
+  contactModal.classList.toggle("is-open", open);
+  contactModal.setAttribute("aria-hidden", String(!open));
+};
+
+if (contactForm && contactModal) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    setContactModalState(true);
+    contactForm.reset();
+  });
+
+  contactModalCloseButtons.forEach((button) => {
+    button.addEventListener("click", () => setContactModalState(false));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setContactModalState(false);
   });
 }
 
