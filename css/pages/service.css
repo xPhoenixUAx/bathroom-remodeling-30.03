@@ -46,6 +46,10 @@
   gap: clamp(1rem, 2vw, 1.4rem);
 }
 
+.service-card-grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .service-card {
   position: relative;
   min-height: clamp(24rem, 38vw, 31rem);
@@ -75,12 +79,15 @@
   display: grid;
   place-items: center;
   padding: 1.4rem;
+  background:
+    linear-gradient(180deg, rgba(38, 35, 31, 0.16), rgba(38, 35, 31, 0.38)),
+    linear-gradient(135deg, rgba(214, 205, 192, 0.88), rgba(246, 243, 238, 0.5) 52%, rgba(184, 197, 193, 0.48));
 }
 
 .service-card__media--placeholder span {
-  max-width: 22rem;
+  max-width: 18rem;
   text-align: left;
-  color: var(--text-muted);
+  color: rgba(38, 35, 31, 0.82);
   line-height: 1.7;
 }
 
@@ -169,6 +176,21 @@
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.compare-section__media--placeholder {
+  display: grid;
+  align-content: end;
+  padding: clamp(1.4rem, 2.5vw, 2rem);
+  background:
+    linear-gradient(180deg, rgba(20, 17, 15, 0.08), rgba(20, 17, 15, 0.32)),
+    linear-gradient(135deg, rgba(214, 205, 192, 0.92), rgba(246, 243, 238, 0.54) 48%, rgba(184, 197, 193, 0.44));
+}
+
+.compare-section__media--placeholder span {
+  max-width: 26rem;
+  color: rgba(38, 35, 31, 0.82);
+  line-height: 1.7;
 }
 
 .compare-section__content {
@@ -357,6 +379,27 @@
     url("../../img/services/services-page/shower/bg-main.jpg") center center / cover no-repeat;
 }
 
+.page-hero--guide__bg--tub {
+  background:
+    linear-gradient(90deg, rgba(19, 17, 15, 0.72) 0%, rgba(19, 17, 15, 0.46) 42%, rgba(19, 17, 15, 0.28) 100%),
+    radial-gradient(circle at 72% 28%, rgba(255, 248, 238, 0.28), transparent 26%),
+    linear-gradient(135deg, rgba(140, 107, 79, 0.72), rgba(214, 205, 192, 0.36) 48%, rgba(184, 197, 193, 0.3));
+}
+
+.page-hero--guide__bg--access {
+  background:
+    linear-gradient(90deg, rgba(19, 17, 15, 0.74) 0%, rgba(19, 17, 15, 0.48) 44%, rgba(19, 17, 15, 0.3) 100%),
+    radial-gradient(circle at 78% 22%, rgba(254, 252, 248, 0.22), transparent 24%),
+    linear-gradient(135deg, rgba(184, 197, 193, 0.64), rgba(246, 243, 238, 0.34) 44%, rgba(140, 107, 79, 0.38));
+}
+
+.page-hero--guide__bg--planning {
+  background:
+    linear-gradient(90deg, rgba(19, 17, 15, 0.76) 0%, rgba(19, 17, 15, 0.5) 42%, rgba(19, 17, 15, 0.3) 100%),
+    radial-gradient(circle at 70% 25%, rgba(254, 252, 248, 0.18), transparent 22%),
+    linear-gradient(135deg, rgba(214, 205, 192, 0.66), rgba(184, 197, 193, 0.3) 45%, rgba(140, 107, 79, 0.36));
+}
+
 .page-hero--guide__inner {
   position: relative;
   min-height: clamp(21rem, 36vw, 28rem);
@@ -441,6 +484,10 @@
   .service-card__list {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  .service-card-grid--three {
+    grid-template-columns: 1fr;
   }
 
   .page-hero--guide__inner {
