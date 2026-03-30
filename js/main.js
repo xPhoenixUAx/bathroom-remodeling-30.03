@@ -8,6 +8,7 @@ const contactModal = document.querySelector("[data-contact-modal]");
 const contactModalCloseButtons = document.querySelectorAll("[data-contact-modal-close]");
 const revealItems = document.querySelectorAll("[data-reveal]");
 const parallaxSections = document.querySelectorAll("[data-parallax-section]");
+const cookieConsentKey = "bathing-room-cookie-consent";
 
 const setMenuState = (open) => {
   if (!menu || !menuToggle) return;
@@ -55,6 +56,52 @@ if (contactForm && contactModal) {
     if (event.key === "Escape") setContactModalState(false);
   });
 }
+
+const createCookieBanner = () => {
+  if (window.localStorage.getItem(cookieConsentKey)) return;
+
+  const banner = document.createElement("div");
+  banner.className = "cookie-banner";
+  banner.setAttribute("role", "dialog");
+  banner.setAttribute("aria-live", "polite");
+  banner.setAttribute("aria-label", "Cookie consent");
+  banner.innerHTML = `
+    <div class="cookie-banner__copy">
+      <p class="cookie-banner__title">Cookies on Bathing Room</p>
+      <p class="cookie-banner__text">
+        We use cookies to keep the website working properly, understand usage, and improve the experience.
+        <a href="cookie.html">Read Cookie Policy</a>
+      </p>
+    </div>
+    <div class="cookie-banner__actions">
+      <button class="button button--subtle" type="button" data-cookie-action="decline">Decline</button>
+      <button class="button button--primary" type="button" data-cookie-action="accept">Accept</button>
+    </div>
+  `;
+
+  document.body.appendChild(banner);
+
+  requestAnimationFrame(() => {
+    banner.classList.add("is-visible");
+  });
+
+  banner.querySelectorAll("[data-cookie-action]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const choice = button.getAttribute("data-cookie-action");
+      window.localStorage.setItem(cookieConsentKey, choice || "accepted");
+      banner.classList.remove("is-visible");
+
+      const removeBanner = () => {
+        banner.removeEventListener("transitionend", removeBanner);
+        banner.remove();
+      };
+
+      banner.addEventListener("transitionend", removeBanner);
+    });
+  });
+};
+
+createCookieBanner();
 
 if (header) {
   const syncHeader = () => {
