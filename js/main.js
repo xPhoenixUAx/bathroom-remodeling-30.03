@@ -8,6 +8,7 @@ const contactModal = document.querySelector("[data-contact-modal]");
 const contactModalCloseButtons = document.querySelectorAll("[data-contact-modal-close]");
 const revealItems = document.querySelectorAll("[data-reveal]");
 const parallaxSections = document.querySelectorAll("[data-parallax-section]");
+const testimonialSlider = document.querySelector("[data-testimonial-slider]");
 const cookieConsentKey = "bathing-room-cookie-consent";
 
 const setMenuState = (open) => {
@@ -102,6 +103,45 @@ const createCookieBanner = () => {
 };
 
 createCookieBanner();
+
+if (testimonialSlider) {
+  const slides = Array.from(testimonialSlider.querySelectorAll("[data-testimonial-slide]"));
+  const dots = Array.from(testimonialSlider.querySelectorAll("[data-testimonial-dot]"));
+  const prevButton = testimonialSlider.querySelector("[data-testimonial-prev]");
+  const nextButton = testimonialSlider.querySelector("[data-testimonial-next]");
+  let activeIndex = slides.findIndex((slide) => slide.classList.contains("is-active"));
+
+  if (activeIndex < 0) activeIndex = 0;
+
+  const syncTestimonials = (index) => {
+    slides.forEach((slide, slideIndex) => {
+      slide.classList.toggle("is-active", slideIndex === index);
+    });
+
+    dots.forEach((dot, dotIndex) => {
+      dot.classList.toggle("is-active", dotIndex === index);
+      dot.setAttribute("aria-current", dotIndex === index ? "true" : "false");
+    });
+
+    activeIndex = index;
+  };
+
+  prevButton?.addEventListener("click", () => {
+    const nextIndex = (activeIndex - 1 + slides.length) % slides.length;
+    syncTestimonials(nextIndex);
+  });
+
+  nextButton?.addEventListener("click", () => {
+    const nextIndex = (activeIndex + 1) % slides.length;
+    syncTestimonials(nextIndex);
+  });
+
+  dots.forEach((dot, dotIndex) => {
+    dot.addEventListener("click", () => syncTestimonials(dotIndex));
+  });
+
+  syncTestimonials(activeIndex);
+}
 
 if (header) {
   const syncHeader = () => {
