@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Bathing Room</title>
+    <meta name="description" content="Share your bathroom remodeling priorities and request help connecting with independent local contractors." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/bundle.css" />
+    <link rel="stylesheet" href="css/pages/contact.css" />
+  </head>
+  <body class="page-contact">
+    <div class="site-shell">
+      <header class="site-header" data-header>
+        <div class="header-meta">
+          <div class="container header-meta__row">
+            <div class="header-meta__info">
+              <a href="tel:524362985">524-362-985</a>
+              <span>USA Bathroom Remodeling Referral Platform</span>
+            </div>
+            <div class="header-meta__social">
+              <a href="#" aria-label="Facebook">Fb</a>
+              <a href="#" aria-label="Twitter">Tw</a>
+              <a href="#" aria-label="Google">G+</a>
+            </div>
+          </div>
+        </div>
+        <div class="container header-row">
+          <a class="brand-mark" href="index.html"><span class="brand-mark__eyebrow">Interior-Led Referral Platform</span><span class="brand-mark__name">Bathing Room</span></a>
+          <nav class="desktop-nav" aria-label="Primary"><a href="services.html">Remodeling Paths</a><a href="services.html">Service Guides</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+          <div class="header-actions"><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>Menu</button></div>
+        </div>
+      </header>
+
+      <div class="overlay-menu" id="site-menu" data-menu>
+        <div class="overlay-menu__backdrop" data-menu-close></div>
+        <div class="overlay-menu__panel">
+          <div class="overlay-menu__top"><p class="overlay-menu__label">Navigation</p><button class="overlay-menu__close" type="button" data-menu-close>Close</button></div>
+          <nav class="overlay-menu__nav" aria-label="Overlay navigation"><a href="index.html" data-stagger-item>Home</a><a href="services.html" data-stagger-item>Remodeling Paths</a><a href="services.html" data-stagger-item>Service Guides</a><a href="about.html" data-stagger-item>Platform Approach</a><a href="contact.html" data-stagger-item>Contact</a><a href="privacy.html" data-stagger-item>Privacy</a><a href="terms.html" data-stagger-item>Terms</a></nav>
+          <div class="overlay-menu__footer" data-stagger-item><a class="button button--primary" href="contact.html">Explore Local Matches</a><p>Explore bathroom upgrade paths with clarity and local direction.</p></div>
+        </div>
+      </div>
+
+      <main>
+        <section class="page-hero section">
+          <div class="container contact-hero">
+            <div data-reveal><p class="section-kicker">Contact</p><h1>Share your bathroom priorities and we will help guide the next comparison step.</h1></div>
+            <div data-reveal><p class="lead">Use the form to outline remodeling goals, access considerations, bathing preferences, or finish direction before exploring independent local contractors.</p></div>
+          </div>
+        </section>
+
+        <section class="section section--bordered contact-layout">
+          <div class="container contact-layout__grid">
+            <form class="contact-form" data-reveal>
+              <label>Full name<input type="text" name="name" placeholder="Your name" /></label>
+              <label>Email address<input type="email" name="email" placeholder="name@email.com" /></label>
+              <label>Phone number<input type="tel" name="phone" placeholder="(555) 555-5555" /></label>
+              <label>Remodeling direction<select name="direction"><option>Walk-In Shower</option><option>Tub-to-Shower Conversion</option><option>Shower-to-Tub Conversion</option><option>Accessibility Upgrades</option><option>Bathroom Renovation Planning</option><option>Not sure yet</option></select></label>
+              <label>Project notes<textarea name="notes" rows="6" placeholder="Share layout goals, comfort needs, bathing preferences, or material considerations."></textarea></label>
+              <button class="button button--primary" type="submit">Submit Inquiry</button>
+            </form>
+            <div class="contact-aside" data-reveal>
+              <div class="image-placeholder image-placeholder--portrait"><span>[IMAGE: Warm residential bathroom with oak vanity, veined stone backsplash, and soft afternoon daylight, premium lifestyle interior photography]</span></div>
+              <div><p class="section-kicker">What to include</p><h2>The most helpful starting notes are usually simple.</h2><p class="muted">Mention whether the room is used daily by one person or several, whether a shower or tub is preferred, and if there are access or safety concerns shaping the project.</p></div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-grid"><a class="brand-mark brand-mark--footer" href="index.html"><span class="brand-mark__eyebrow">Bathroom referral platform</span><span class="brand-mark__name">Bathing Room</span></a><div class="footer-links"><a href="services.html">Remodeling Paths</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div>
+        <div class="container footer-legal"><p>Disclaimer: This site is a free service to assist homeowners in connecting with local service providers. All contractors/providers are independent and this site does not warrant or guarantee any work performed. It is the responsibility of the homeowner to verify that the hired contractor furnishes the necessary license and insurance required for the work being performed. All persons depicted in a photo or video are actors or models and not contractors listed on this site.</p></div>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

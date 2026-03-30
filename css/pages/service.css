@@ -1,0 +1,464 @@
+.service-hero,
+.prose-grid,
+.guide-intro,
+.layout-notes__grid,
+.bathtub-comparison__grid,
+.suit-section__grid,
+.comparison-field__items {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 5rem);
+}
+
+.service-hero,
+.suit-section__grid {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.prose-grid {
+  grid-template-columns: 0.85fr 1.15fr;
+}
+
+.guide-intro {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: start;
+}
+
+.layout-notes__grid,
+.bathtub-comparison__grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.service-card-section {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.4rem);
+}
+
+.service-card-section__intro {
+  display: grid;
+  gap: 0.85rem;
+  max-width: 44rem;
+}
+
+.service-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.4rem);
+}
+
+.service-card {
+  position: relative;
+  min-height: clamp(24rem, 38vw, 31rem);
+  background: #1f1b18;
+  border: 1px solid rgba(140, 107, 79, 0.14);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 18px 34px rgba(38, 35, 31, 0.06);
+}
+
+.service-card__media {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(232, 224, 213, 0.46), rgba(246, 243, 238, 0.9));
+}
+
+.service-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+  transition: transform 0.7s ease;
+}
+
+.service-card__media--placeholder {
+  display: grid;
+  place-items: center;
+  padding: 1.4rem;
+}
+
+.service-card__media--placeholder span {
+  max-width: 22rem;
+  text-align: left;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.service-card__body {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  z-index: 1;
+}
+
+.service-card__overlay h3 {
+  font-size: clamp(1.2rem, 1.7vw, 1.5rem);
+  line-height: 1.25;
+}
+
+.service-card__overlay {
+  position: absolute;
+  inset: auto 0 0;
+  display: grid;
+  gap: 0.65rem;
+  padding: 1.35rem 1.35rem 1.45rem;
+  background: linear-gradient(180deg, rgba(18, 16, 14, 0.02) 0%, rgba(18, 16, 14, 0.44) 34%, rgba(18, 16, 14, 0.9) 100%);
+  color: #fff;
+  transform: translateY(calc(100% - 5.6rem));
+  transition: transform 0.45s ease;
+}
+
+.service-card__overlay h3 {
+  color: #fff;
+  max-width: 12ch;
+  text-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+  transition: margin-bottom 0.35s ease;
+}
+
+.service-card__overlay p {
+  color: rgba(255, 255, 255, 0.78);
+  opacity: 0;
+  transform: translateY(0.65rem);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.service-card__list {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  transform: translateY(0.65rem);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.service-card__list li {
+  position: relative;
+  padding-left: 1rem;
+  color: rgba(255, 255, 255, 0.74);
+  line-height: 1.65;
+}
+
+.service-card__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72rem;
+  width: 0.34rem;
+  height: 0.34rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.compare-section {
+  align-items: start;
+}
+
+.compare-section__media {
+  position: relative;
+  min-height: clamp(22rem, 34vw, 30rem);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 18px 34px rgba(38, 35, 31, 0.06);
+}
+
+.compare-section__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.compare-section__content {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+
+.compare-section__content > p {
+  max-width: 40rem;
+}
+
+.compare-section__points {
+  display: grid;
+  gap: 1rem;
+  margin-top: 0.45rem;
+}
+
+.compare-section__point {
+  display: grid;
+  gap: 0.55rem;
+  padding: 1rem 0 0;
+  border-top: 1px solid var(--border);
+}
+
+.compare-section__point h3 {
+  font-size: clamp(1.15rem, 1.6vw, 1.35rem);
+  line-height: 1.3;
+}
+
+.compare-section__point p {
+  color: var(--text-muted);
+}
+
+.service-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 17, 15, 0.06) 0%, rgba(20, 17, 15, 0.12) 56%, rgba(20, 17, 15, 0.34) 100%);
+  z-index: 0;
+  transition: opacity 0.35s ease;
+}
+
+.service-card:hover .service-card__media img,
+.service-card:focus-within .service-card__media img {
+  transform: scale(1.06);
+}
+
+.service-card:hover .service-card__overlay,
+.service-card:focus-within .service-card__overlay {
+  transform: translateY(0);
+}
+
+.service-card:hover .service-card__overlay p,
+.service-card:focus-within .service-card__overlay p,
+.service-card:hover .service-card__list,
+.service-card:focus-within .service-card__list {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-card:hover::after,
+.service-card:focus-within::after {
+  opacity: 0.92;
+}
+
+.comparison-field__items {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: var(--space-xl);
+}
+
+.comparison-field__items article {
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.prose-grid__content,
+.layout-notes__stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.guide-intro__lead,
+.guide-intro__content {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+
+.guide-intro__lead h2 {
+  max-width: 12ch;
+}
+
+.guide-intro__lead .muted {
+  max-width: 31rem;
+}
+
+.guide-intro__statement {
+  padding: 0 0 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.guide-intro__statement p {
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  line-height: 1.8;
+  color: var(--text-base);
+  max-width: 40rem;
+}
+
+.guide-intro__themes {
+  display: grid;
+  gap: 1rem;
+}
+
+.guide-intro__theme {
+  display: grid;
+  gap: 0.65rem;
+  padding: clamp(1.2rem, 2vw, 1.6rem) clamp(1.1rem, 2.4vw, 1.5rem);
+  background: linear-gradient(180deg, rgba(254, 252, 248, 0.96), rgba(246, 243, 238, 0.92));
+  border: 1px solid rgba(140, 107, 79, 0.12);
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(38, 35, 31, 0.04);
+}
+
+.guide-intro__theme h3 {
+  font-size: clamp(1.2rem, 1.55vw, 1.45rem);
+  line-height: 1.3;
+  max-width: 28rem;
+}
+
+.guide-intro__theme p {
+  color: var(--text-muted);
+}
+
+.info-points {
+  display: grid;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.info-point {
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.info-point h3 {
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+}
+
+.info-point p {
+  margin-top: 0.45rem;
+  color: var(--text-muted);
+}
+
+.page-service main > .section + .section {
+  padding-top: calc(var(--space-2xl) - 0.5rem);
+}
+
+.prose-grid__content p,
+.layout-notes__stack p,
+.comparison-field__items p,
+.bathtub-comparison__grid p {
+  color: var(--text-muted);
+}
+
+.comparison-field__items p {
+  margin-top: 0.6rem;
+}
+
+.page-hero--guide {
+  position: relative;
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.page-hero--guide__bg {
+  position: absolute;
+  inset: 0;
+}
+
+.page-hero--guide__bg--shower {
+  background:
+    linear-gradient(90deg, rgba(19, 17, 15, 0.72) 0%, rgba(19, 17, 15, 0.5) 40%, rgba(19, 17, 15, 0.26) 100%),
+    linear-gradient(180deg, rgba(19, 17, 15, 0.16), rgba(19, 17, 15, 0.32)),
+    url("../../img/services/services-page/shower/bg-main.jpg") center center / cover no-repeat;
+}
+
+.page-hero--guide__inner {
+  position: relative;
+  min-height: clamp(21rem, 36vw, 28rem);
+  display: flex;
+  align-items: center;
+  padding-top: clamp(2rem, 4vw, 3.2rem);
+  padding-bottom: clamp(2rem, 4vw, 3.2rem);
+}
+
+.page-hero--guide__content {
+  width: min(36rem, 100%);
+}
+
+.page-hero--guide__content > * + * {
+  margin-top: 1.1rem;
+}
+
+.page-hero--guide__content h1 {
+  color: #fff;
+  font-size: clamp(2.2rem, 3.4vw, 3.5rem);
+  max-width: 12ch;
+}
+
+.page-hero--guide__content .section-kicker {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.page-hero--guide__content .lead {
+  max-width: 32rem;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.page-hero--guide__content .button--ghost {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.page-hero--guide__content .hero-actions {
+  margin-top: 1.5rem;
+}
+
+.prose-grid > div,
+.guide-intro > div,
+.layout-notes__grid > div,
+.split-story__content,
+.faq-layout > div {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+
+@media (max-width: 960px) {
+  .service-hero,
+  .prose-grid,
+  .guide-intro,
+  .layout-notes__grid,
+  .bathtub-comparison__grid,
+  .suit-section__grid,
+  .comparison-field__items,
+  .service-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-intro__lead h2,
+  .guide-intro__lead .muted,
+  .guide-intro__statement p,
+  .guide-intro__theme h3 {
+    max-width: none;
+  }
+
+  .service-card {
+    min-height: 22rem;
+  }
+
+  .service-card__overlay {
+    transform: translateY(0);
+    position: absolute;
+  }
+
+  .service-card__overlay p,
+  .service-card__list {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .page-hero--guide__inner {
+    min-height: 18rem;
+    align-items: end;
+    padding-top: 4.5rem;
+    padding-bottom: 2.25rem;
+  }
+
+  .page-hero--guide__content {
+    width: min(100%, 31rem);
+  }
+
+  .page-hero--guide__content h1 {
+    font-size: clamp(2rem, 7vw, 2.8rem);
+  }
+
+  .page-service main > .section + .section {
+    padding-top: var(--space-xl);
+  }
+}

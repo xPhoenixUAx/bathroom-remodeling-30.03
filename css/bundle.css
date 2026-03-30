@@ -1,0 +1,77 @@
+.site-shell {
+  position: relative;
+}
+
+.page-hero__grid,
+.split-story,
+.connection-section__grid,
+.service-bridge__grid,
+.contact-hero,
+.legal-hero,
+.about-story__grid,
+.about-columns__grid,
+.faq-layout {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 5rem);
+}
+
+.page-hero__grid,
+.connection-section__grid,
+.service-bridge__grid,
+.contact-hero,
+.legal-hero,
+.about-story__grid,
+.about-columns__grid,
+.faq-layout {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.split-story {
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+}
+
+.story-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+.section-intro,
+.feature-spread__content,
+.legal-copy {
+  max-width: 42rem;
+}
+
+.legal-copy {
+  display: grid;
+  gap: 1rem;
+}
+
+.legal-copy h2 {
+  margin-top: 1rem;
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+}
+
+.connection-section--soft .connection-section__grid {
+  padding: clamp(1.75rem, 4vw, 3rem);
+  background: rgba(254, 252, 248, 0.72);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+@media (max-width: 900px) {
+  .page-hero__grid,
+  .split-story,
+  .connection-section__grid,
+  .service-bridge__grid,
+  .contact-hero,
+  .legal-hero,
+  .about-story__grid,
+  .about-columns__grid,
+  .faq-layout,
+  .story-columns {
+    grid-template-columns: 1fr;
+  }
+}

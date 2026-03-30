@@ -1,0 +1,25 @@
+.contact-layout__grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: clamp(1.5rem, 4vw, 5rem);
+  align-items: start;
+}
+
+.contact-form {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: rgba(254, 252, 248, 0.78);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+}
+
+.contact-aside {
+  display: grid;
+  gap: 1.2rem;
+}
+
+@media (max-width: 900px) {
+  .contact-layout__grid {
+    grid-template-columns: 1fr;
+  }
+}
